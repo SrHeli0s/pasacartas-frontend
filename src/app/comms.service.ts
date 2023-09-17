@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommsService {
-  private url:string = "https://pasacartas-backend.vercel.app" //URL del backend
+  private url:string = "https://pasacartas-backend.vercel.app/" //URL del backend
   
   public gameID = ''
   public playerID = -1
