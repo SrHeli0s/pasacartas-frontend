@@ -8,3 +8,7 @@
 .center {
     margin:5ch
 }
+
+mat-form-field {
+    margin: 1ch
+}

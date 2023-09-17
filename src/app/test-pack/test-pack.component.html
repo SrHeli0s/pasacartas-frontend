@@ -1,5 +1,52 @@
 <div class="testPack">
     <div class="center">
+        <form class="form">
+            <mat-form-field class="nCards">
+                <mat-label>Nº de cartas / sobre</mat-label>
+                <input matInput type="number" name="nCards" [(ngModel)]="settings.nCardsInPack">
+            </mat-form-field>
+
+            <mat-form-field class="nPacks">
+                <mat-label>Nº de sobres abiertos</mat-label>
+                <input matInput type="number" name="nPacks" [(ngModel)]="settings.nPacks">
+            </mat-form-field>
+
+            <mat-form-field class="minProb">
+                <mat-label>Probabilidad mínima</mat-label>
+                <input matInput type="number" name="minProb" [(ngModel)]="settings.minProbAfterMod">
+            </mat-form-field>
+
+            <fieldset>
+                <legend>Probabilidades de cartas</legend>
+                <mat-form-field class="commonProb">
+                    <mat-label [ngStyle]="{'color': '#959595'}">Común</mat-label>
+                    <input matInput type="number" name="common" [(ngModel)]="settings.probabilities.common">
+                </mat-form-field>
+
+                <mat-form-field class="uncommonProb">
+                    <mat-label [ngStyle]="{'color': '#18cf00'}">Poco común</mat-label>
+                    <input matInput type="number" name="uncommon" [(ngModel)]="settings.probabilities.uncommon">
+                </mat-form-field>
+
+                <mat-form-field class="rareProb">
+                    <mat-label [ngStyle]="{'color': '#0070DD'}">Raro</mat-label>
+                    <input matInput type="number" name="rare" [(ngModel)]="settings.probabilities.rare">
+                </mat-form-field>
+
+                <mat-form-field class="epicProb">
+                    <mat-label [ngStyle]="{'color': '#A335EE'}">Épico</mat-label>
+                    <input matInput type="number" name="epic" [(ngModel)]="settings.probabilities.epic">
+                </mat-form-field>
+
+                <mat-form-field class="legendaryProb">
+                    <mat-label [ngStyle]="{'color': '#FF8000'}">Legendario</mat-label>
+                    <input matInput type="number" name="legendary" [(ngModel)]="settings.probabilities.legendary">
+                </mat-form-field>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="center">
         <button mat-raised-button color="primary" (click)="newPack()">Generar nuevo</button>
     </div>
     <div class="container">
