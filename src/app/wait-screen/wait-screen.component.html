@@ -1,0 +1,8 @@
+<div class="waitScreen">
+    <p>Esperando a la seleccion del resto...</p>
+    <h1>Tus pokemons seleccionados hasta ahora:</h1>
+    <div class="container">
+        <game-card *ngFor="let c of hand.data" [rarity]="c[1]" [name]="c[0]"></game-card>
+    </div>
+</div>
+<link rel="stylesheet" href="/assets/pokesprite-pokemon-gen8.css"/>

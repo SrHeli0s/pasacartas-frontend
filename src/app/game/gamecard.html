@@ -1,0 +1,7 @@
+<mat-card class="card" [ngStyle]="getBackground()">
+    <mat-card-header>
+        <mat-card-title>{{name}}</mat-card-title>
+    </mat-card-header>
+    <span class="pokesprite pokemon" [ngClass]="name.toLowerCase().replace(' ','-').replace('.','').replace('\'','')"></span>
+    <img mat-card-image [src]="img">
+</mat-card>

@@ -1,0 +1,26 @@
+.card {
+    aspect-ratio: 1/1;
+    width: 30ch;
+    image-rendering: pixelated;
+    color: #FFF;
+    border-radius: 2em;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(136,136,136,0.5);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(136,136,136,0.5);
+    box-shadow: 10px 10px 5px 0px rgba(136,136,136,0.5);
+}
+.card mat-card-header {
+    justify-content: center;
+    margin-top: 1em;
+}
+.card mat-card-title {
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+.card .pokesprite {
+    scale: 4;
+    margin: auto;
+    margin-top: 2em;
+}

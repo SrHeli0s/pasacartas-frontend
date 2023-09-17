@@ -1,0 +1,9 @@
+<div class="testPack">
+    <div class="center">
+        <button mat-raised-button color="primary" (click)="newPack()">Generar nuevo</button>
+    </div>
+    <div class="container">
+        <game-card *ngFor="let c of pack" [rarity]="c[1]" [name]="c[0]"></game-card>
+    </div>
+</div>
+<link rel="stylesheet" href="/assets/pokesprite-pokemon-gen8.css"/>
