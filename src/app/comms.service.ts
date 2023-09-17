@@ -1,11 +1,11 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommsService {
-  private url:string = "pasacartas-backend.vercel.app/" //URL del backend
+  private url:string = "http://pasacartas-backend.vercel.app" //URL del backend
   
   public gameID = ''
   public playerID = -1
@@ -60,9 +60,8 @@ export class CommsService {
 
   private post(where:string, what:any): Promise<any> {
     console.log("POST ",what," en " + this.url+where)
-    const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
     return new Promise((resolve, reject) => {
-      this.http.post(this.url+where, what,{headers, responseType: 'text'}).subscribe({
+      this.http.post(this.url+where, what).subscribe({
         next: (v:any) => {
           console.log("RECIBIDO ", v)
           resolve(v);
@@ -77,9 +76,8 @@ export class CommsService {
 
   private get(where:string): Promise<any> {
     console.log("GET en " + this.url+where)
-    const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
     return new Promise((resolve, reject) => {
-      this.http.get(this.url+where,{headers, responseType: 'text'}).subscribe({
+      this.http.get(this.url+where).subscribe({
         next: (v:any) => {
           console.log("RECIBIDO ", v)
           resolve(v);
