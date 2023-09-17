@@ -13,6 +13,7 @@ export class TestPackComponent implements OnInit{
   constructor(public commsService: CommsService) {}
 
   async newPack() {
+    await this.commsService.setSettings(this.settings)
     await this.commsService.newGame()
     this.pack = await this.commsService.startGame()
   }
