@@ -1,4 +1,5 @@
 .card {
+    cursor:pointer;
     aspect-ratio: 1/1;
     width: 30ch;
     image-rendering: pixelated;
@@ -18,9 +19,14 @@
     font-size: xx-large;
 }
 
+.card:hover .pokesprite {
+    scale: 5
+}
+
 
 .card .pokesprite {
     scale: 4;
     margin: auto;
     margin-top: 2em;
+    transition: scale 0.5s;
 }
