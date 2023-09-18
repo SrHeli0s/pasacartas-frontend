@@ -43,6 +43,155 @@
                     <input matInput type="number" name="legendary" [(ngModel)]="settings.probabilities.legendary">
                 </mat-form-field>
             </fieldset>
+            <fieldset>
+                <legend>
+                    Modificadores
+                </legend>
+                <div class="modcontainer">
+                    <p [ngStyle]="{'color': '#959595'}"><b>Pick Común</b></p>
+                    <div class="break"></div>
+                    <mat-form-field class="mod commonMod0">
+                        <mat-label [ngStyle]="{'color': '#959595'}">Mod. Común</mat-label>
+                        <input matInput type="number" name="commonMod0" [(ngModel)]="settings.modifications.commonpick.commonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod uncommonMod0">
+                        <mat-label [ngStyle]="{'color': '#18cf00'}">Mod. Poco común</mat-label>
+                        <input matInput type="number" name="uncommonMod0" [(ngModel)]="settings.modifications.commonpick.uncommonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod rareMod0">
+                        <mat-label [ngStyle]="{'color': '#0070DD'}">Mod. Raro</mat-label>
+                        <input matInput type="number" name="rareMod0" [(ngModel)]="settings.modifications.commonpick.raremod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod epicMod0">
+                        <mat-label [ngStyle]="{'color': '#A335EE'}">Mod. Épico</mat-label>
+                        <input matInput type="number" name="epicMod0" [(ngModel)]="settings.modifications.commonpick.epicmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod legendaryMod0">
+                        <mat-label [ngStyle]="{'color': '#FF8000'}">Mod. Legendario</mat-label>
+                        <input matInput type="number" name="legendaryMod0" [(ngModel)]="settings.modifications.commonpick.legendarymod">
+                    </mat-form-field>
+                </div>
+
+                <div class="modcontainer">
+                    <p [ngStyle]="{'color': '#18cf00'}"><b>Pick Poco Común</b></p>
+                    <div class="break"></div>
+                    <mat-form-field class="mod commonMod1">
+                        <mat-label [ngStyle]="{'color': '#959595'}">Mod. Común</mat-label>
+                        <input matInput type="number" name="commonMod1" [(ngModel)]="settings.modifications.uncommonpick.commonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod uncommonMod1">
+                        <mat-label [ngStyle]="{'color': '#18cf00'}">Mod. Poco común</mat-label>
+                        <input matInput type="number" name="uncommonMod1" [(ngModel)]="settings.modifications.uncommonpick.uncommonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod rareMod1">
+                        <mat-label [ngStyle]="{'color': '#0070DD'}">Mod. Raro</mat-label>
+                        <input matInput type="number" name="rareMod1" [(ngModel)]="settings.modifications.uncommonpick.raremod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod epicMod1">
+                        <mat-label [ngStyle]="{'color': '#A335EE'}">Mod. Épico</mat-label>
+                        <input matInput type="number" name="epicMod1" [(ngModel)]="settings.modifications.uncommonpick.epicmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod legendaryMod1">
+                        <mat-label [ngStyle]="{'color': '#FF8000'}">Mod. Legendario</mat-label>
+                        <input matInput type="number" name="legendaryMod1" [(ngModel)]="settings.modifications.uncommonpick.legendarymod">
+                    </mat-form-field>
+                </div>
+
+                <div class="modcontainer">
+                    <p [ngStyle]="{'color': '#0070DD'}"><b>Pick Raro</b></p>
+                    <div class="break"></div>
+                    <mat-form-field class="mod commonMod2">
+                        <mat-label [ngStyle]="{'color': '#959595'}">Mod. Común</mat-label>
+                        <input matInput type="number" name="commonMod2" [(ngModel)]="settings.modifications.rarepick.commonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod uncommonMod2">
+                        <mat-label [ngStyle]="{'color': '#18cf00'}">Mod. Poco común</mat-label>
+                        <input matInput type="number" name="uncommonMod2" [(ngModel)]="settings.modifications.rarepick.uncommonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod rareMod2">
+                        <mat-label [ngStyle]="{'color': '#0070DD'}">Mod. Raro</mat-label>
+                        <input matInput type="number" name="rareMod2" [(ngModel)]="settings.modifications.rarepick.raremod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod epicMod2">
+                        <mat-label [ngStyle]="{'color': '#A335EE'}">Mod. Épico</mat-label>
+                        <input matInput type="number" name="epicMod2" [(ngModel)]="settings.modifications.rarepick.epicmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod legendaryMod2">
+                        <mat-label [ngStyle]="{'color': '#FF8000'}">Mod. Legendario</mat-label>
+                        <input matInput type="number" name="legendaryMod2" [(ngModel)]="settings.modifications.rarepick.legendarymod">
+                    </mat-form-field>
+                </div>
+
+                <div class="modcontainer">
+                    <p [ngStyle]="{'color': '#A335EE'}"><b>Pick Épico</b></p>
+                    <div class="break"></div>
+                    <mat-form-field class="mod commonMod3">
+                        <mat-label [ngStyle]="{'color': '#959595'}">Mod. Común</mat-label>
+                        <input matInput type="number" name="commonMod3" [(ngModel)]="settings.modifications.epicpick.commonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod uncommonMod3">
+                        <mat-label [ngStyle]="{'color': '#18cf00'}">Mod. Poco común</mat-label>
+                        <input matInput type="number" name="uncommonMod3" [(ngModel)]="settings.modifications.epicpick.uncommonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod rareMod3">
+                        <mat-label [ngStyle]="{'color': '#0070DD'}">Mod. Raro</mat-label>
+                        <input matInput type="number" name="rareMod3" [(ngModel)]="settings.modifications.epicpick.raremod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod epicMod3">
+                        <mat-label [ngStyle]="{'color': '#A335EE'}">Mod. Épico</mat-label>
+                        <input matInput type="number" name="epicMod3" [(ngModel)]="settings.modifications.epicpick.epicmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod legendaryMod3">
+                        <mat-label [ngStyle]="{'color': '#FF8000'}">Mod. Legendario</mat-label>
+                        <input matInput type="number" name="legendaryMod3" [(ngModel)]="settings.modifications.epicpick.legendarymod">
+                    </mat-form-field>
+                </div>
+
+                <div class="modcontainer">
+                    <p [ngStyle]="{'color': '#FF8000'}"><b>Pick Legendario</b></p>
+                    <div class="break"></div>
+                    <mat-form-field class="mod commonMod4">
+                        <mat-label [ngStyle]="{'color': '#959595'}">Mod. Común</mat-label>
+                        <input matInput type="number" name="commonMod4" [(ngModel)]="settings.modifications.legendarypick.commonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod uncommonMod4">
+                        <mat-label [ngStyle]="{'color': '#18cf00'}">Mod. Poco común</mat-label>
+                        <input matInput type="number" name="uncommonMod4" [(ngModel)]="settings.modifications.legendarypick.uncommonmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod rareMod4">
+                        <mat-label [ngStyle]="{'color': '#0070DD'}">Mod. Raro</mat-label>
+                        <input matInput type="number" name="rareMod4" [(ngModel)]="settings.modifications.legendarypick.raremod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod epicMod4">
+                        <mat-label [ngStyle]="{'color': '#A335EE'}">Mod. Épico</mat-label>
+                        <input matInput type="number" name="epicMod4" [(ngModel)]="settings.modifications.legendarypick.epicmod">
+                    </mat-form-field>
+                    <div class="break"></div>
+                    <mat-form-field class="mod legendaryMod4">
+                        <mat-label [ngStyle]="{'color': '#FF8000'}">Mod. Legendario</mat-label>
+                        <input matInput type="number" name="legendaryMod4" [(ngModel)]="settings.modifications.legendarypick.legendarymod">
+                    </mat-form-field>
+                </div>
+            </fieldset>
         </form>
     </div>
 

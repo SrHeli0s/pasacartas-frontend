@@ -12,3 +12,28 @@
 mat-form-field {
     margin: 1ch
 }
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+    justify-content: center;
+}
+
+::ng-deep .mod  .mat-mdc-form-field-subscript-wrapper {
+    height: 0px !important;
+}
+
+.modcontainer {
+    display: inline-flex;
+    width: min-content;
+    flex-wrap: wrap;
+}
+
+.modcontainer p {
+    width: 100%;
+    justify-content: center;
+}
+
+fieldset {
+    margin-bottom: 3ch;
+}
