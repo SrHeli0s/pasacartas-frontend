@@ -1,13 +1,14 @@
 <div class="game">
     <h1>Selecciona tu nuevo pokemon:</h1>
     <div class="container">
-        <game-card *ngFor="let c of hand.pack; index as i" [rarity]="c[1]" [name]="c[0]" (click)="select(i)"></game-card>
+        <game-card *ngFor="let c of hand.pack; index as i" [class]="c[1]" [rarity]="c[2]" [name]="c[0]" (click)="select(i)"></game-card>
     </div>
     <br>
     <br>
     <h1>Tus pokemons seleccionados hasta ahora:</h1>
     <div class="container">
-        <game-card *ngFor="let c of hand.data" [rarity]="c[1]" [name]="c[0]"></game-card>
+        <game-card *ngFor="let c of hand.data" [class]="c[1]" [rarity]="c[2]" [name]="c[0]"></game-card>
     </div>
 </div>
 <link rel="stylesheet" href="/assets/pokesprite-pokemon-gen8.css"/>
+<link rel="stylesheet" href="/assets/pokesprite-inventory.css" />

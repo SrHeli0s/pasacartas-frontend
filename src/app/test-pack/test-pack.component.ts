@@ -14,8 +14,7 @@ export class TestPackComponent implements OnInit{
 
   async newPack() {
     await this.commsService.setSettings(this.settings)
-    await this.commsService.newGame()
-    this.pack = await this.commsService.startGame()
+    this.pack = await this.commsService.generatePack()
   }
 
   async ngOnInit(): Promise<void> {

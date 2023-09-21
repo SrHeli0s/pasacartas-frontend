@@ -30,3 +30,7 @@
     margin-top: 2em;
     transition: scale 0.5s;
 }
+
+.card .item {
+    margin-top: 4em;
+}

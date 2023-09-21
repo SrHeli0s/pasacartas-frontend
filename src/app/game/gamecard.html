@@ -2,6 +2,5 @@
     <mat-card-header>
         <mat-card-title>{{name}}</mat-card-title>
     </mat-card-header>
-    <span class="pokesprite pokemon" [ngClass]="name.toLowerCase().replace(' ','-').replace('.','').replace('\'','')"></span>
-    <img mat-card-image [src]="img">
+    <span class="pokesprite pokemon" [ngClass]="class.toLowerCase().replace('_','-').replace('.','').replace('\'','')"></span>
 </mat-card>

@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class CommsService {
   private url:string = "https://pasacartas-backend.vercel.app/" //URL del backend
   
+  
   public gameID = ''
   public playerID = -1
 
@@ -44,6 +45,11 @@ export class CommsService {
 
   public async pick(i:any) {
     await this.post('pick/'+this.gameID+'/'+i,{'playerid':this.playerID})
+  }
+
+  public async generatePack() {
+    const res = await this.get('generatePack')
+    return res.pack
   }
 
   // ======================= SETTINGS ======================= \\

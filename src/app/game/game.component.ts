@@ -11,7 +11,7 @@ import { HandService } from '../hand.service';
 export class GameCard {
   @Input() rarity!:string;
   @Input() name!:string;
-  @Input() img!:string;
+  @Input() class!:string;
 
   public getBackground() {
     switch (this.rarity) {
