@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  codeGame:string = ''
+  codeGame:string = 'XXXX'
 
   constructor(public commsService:CommsService, private router: Router) {}
 
