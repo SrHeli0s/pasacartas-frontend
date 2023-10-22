@@ -76,6 +76,13 @@ export class CommsService {
     return res.pack
   }
 
+  public async getAll() {
+    this.working = true
+    const res = await this.get('getAll')
+    this.working = false
+    return res
+  }
+
   // ======================= SETTINGS ======================= \\
   public async getSettings() {
     this.working = true

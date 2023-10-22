@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { TestPackComponent } from './test-pack/test-pack.component';
 import { WaitScreenComponent } from './wait-screen/wait-screen.component';
 import { FinalShowComponent } from './final-show/final-show.component';
+import { CardlistComponent } from './cardlist/cardlist.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FinalShowComponent } from './final-show/final-show.component';
     GameCard,
     TestPackComponent,
     WaitScreenComponent,
-    FinalShowComponent
+    FinalShowComponent,
+    CardlistComponent
   ],
   imports: [
     BrowserModule,

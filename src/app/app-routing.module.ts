@@ -6,6 +6,7 @@ import { GameComponent } from './game/game.component';
 import { TestPackComponent } from './test-pack/test-pack.component';
 import { WaitScreenComponent } from './wait-screen/wait-screen.component';
 import { FinalShowComponent } from './final-show/final-show.component';
+import { CardlistComponent } from './cardlist/cardlist.component';
 
 const routes: Routes = [
   { path: "", component: LandingComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "game/wait", component: WaitScreenComponent},
   { path: "game/final", component: FinalShowComponent},
   { path: "testPack", component:TestPackComponent},
+  { path: "cardList", component:CardlistComponent},
 ];
 
 @NgModule({

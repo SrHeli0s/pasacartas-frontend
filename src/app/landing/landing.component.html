@@ -13,4 +13,8 @@
         <button mat-raised-button color="primary" (click)="joinGame()" [disabled]="commsService.working || this.codeGame.length < 4">Unirse a partida</button>
     </div>
 </div>
-<a routerLink="testPack" class="link">Abridor de packs</a>
+<div class="link">
+    <a routerLink="testPack">Abridor de packs</a>
+    <br>
+    <a routerLink="cardList">Lista de cartas</a>
+</div>
