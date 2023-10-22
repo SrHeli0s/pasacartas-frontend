@@ -19,7 +19,7 @@ export class WaitScreenComponent implements OnInit{
       if (pack!=undefined) {
         this.hand.pack = pack
         clearInterval(this.interval);
-        await new Promise( resolve => setTimeout(resolve, 4000 + commsService.playerID*500) );
+        await new Promise( resolve => setTimeout(resolve, 4000) );
         if (this.hand.pack.length == 0) {
           router.navigateByUrl('/game/final')
         }
@@ -27,7 +27,7 @@ export class WaitScreenComponent implements OnInit{
           router.navigateByUrl('/game')
         }
       }
-    }, 3000 + commsService.playerID*500);
+    }, 3000);
   }
 
   ngOnInit(): void {

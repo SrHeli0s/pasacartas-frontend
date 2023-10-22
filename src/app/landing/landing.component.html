@@ -6,10 +6,10 @@
     <div class="break"></div>
 
     <div class="center">
-        <!-- <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill">
             <mat-label>Codigo de partida</mat-label>
             <input matInput placeholder="XXXX" [(ngModel)]="codeGame">
-        </mat-form-field> -->
+        </mat-form-field>
         <button mat-raised-button color="primary" (click)="joinGame()" [disabled]="this.codeGame.length < 4">Unirse a partida</button>
     </div>
 </div>
