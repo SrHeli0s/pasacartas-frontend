@@ -205,7 +205,7 @@
     <div class="break"></div>
 
     <div class="center" *ngIf="this.commsService.playerID==0">
-        <button mat-raised-button color="primary" (click)="startGame()">Todos estan listos para empezar</button>
+        <button mat-raised-button color="primary" (click)="startGame()" [disabled]="commsService.working">Todos estan listos para empezar</button>
     </div>
     <div class="center" *ngIf="this.commsService.playerID!=0">
         <p>Esperando al resto de jugadores...</p>

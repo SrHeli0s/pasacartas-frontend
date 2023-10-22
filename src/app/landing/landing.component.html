@@ -1,6 +1,6 @@
 <div class="landing">
     <div class="center">
-        <button mat-raised-button color="primary" (click)="newGame()">Crear partida</button>
+        <button mat-raised-button color="primary" (click)="newGame()" [disabled]="commsService.working">Crear partida</button>
     </div>
 
     <div class="break"></div>
@@ -10,7 +10,7 @@
             <mat-label>Codigo de partida</mat-label>
             <input matInput placeholder="XXXX" [(ngModel)]="codeGame">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="joinGame()" [disabled]="this.codeGame.length < 4">Unirse a partida</button>
+        <button mat-raised-button color="primary" (click)="joinGame()" [disabled]="commsService.working || this.codeGame.length < 4">Unirse a partida</button>
     </div>
 </div>
 <a routerLink="testPack" class="link">Abridor de packs</a>

@@ -54,6 +54,7 @@ export class GameComponent implements OnInit {
   }
 
   select(i:any) {
+    if (this.commsService.working) return
     this.hand.add(this.hand.pack[i])
     this.commsService.pick(i)
     this.router.navigateByUrl('/game/wait')

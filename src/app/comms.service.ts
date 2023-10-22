@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CommsService {
   private url:string = "https://pasacartas-backend.vercel.app/" //URL del backend
   
-  
+  public working = false
   public gameID = ''
   public playerID = -1
 
@@ -15,50 +15,79 @@ export class CommsService {
 
   // ======================= GAME HANDLE ======================= \\
   public async newGame() {
+    this.working = true
     const res = await this.get('new')
     this.gameID = res.code
     this.playerID = res.playerid
+    this.working = false
   }
 
   public async joinGame(id:string) {
+    this.working = true
     const res = await this.get('join/'+id)
     this.gameID = res.code
     this.playerID = res.playerid
+    this.working = false
   }
 
   public async startGame() {
+    this.working = true
     const res = await this.post('start/'+this.gameID,{'playerid':this.playerID})
+    this.working = false
     return res.pack
   }
 
   public async isReady() {
+    this.working = true
     const res = await this.post('isready/'+this.gameID,{'playerid':this.playerID})
-    if (res.state == 0) { return undefined }
-    else { return res.pack }
+    if (res.state == 0) { 
+      this.working = false
+      return undefined
+    }
+    else { 
+      this.working = false
+      return res.pack
+    }
   }
 
   public async gameStarted() {
+    this.working = true
     const res = await this.post('gamestarted/'+this.gameID,{'playerid':this.playerID})
-    if (res.state == 0) { return undefined }
-    else { return res.pack }
+    if (res.state == 0) {
+      this.working = false
+      return undefined
+    }
+    else {
+      this.working = false
+      return res.pack
+    }
   }
 
   public async pick(i:any) {
+    this.working = true
     await this.post('pick/'+this.gameID+'/'+i,{'playerid':this.playerID})
+    this.working = false
   }
 
   public async generatePack() {
+    this.working = true
     const res = await this.get('generatePack')
+    this.working = false
     return res.pack
   }
 
   // ======================= SETTINGS ======================= \\
   public async getSettings() {
-    return await this.get('conf')
+    this.working = true
+    const res =  await this.get('conf')
+    this.working = false
+    return res
   }
 
   public async setSettings(settings:any) {
+    this.working = true
     await this.post('conf',{'data':settings})
+    this.working = false
   }
   
 

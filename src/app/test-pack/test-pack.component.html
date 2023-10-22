@@ -196,7 +196,7 @@
     </div>
 
     <div class="center">
-        <button mat-raised-button color="primary" (click)="newPack()">Generar nuevo</button>
+        <button mat-raised-button color="primary" (click)="newPack()" [disabled]="commsService.working">Generar nuevo</button>
     </div>
     <div class="container">
         <game-card *ngFor="let c of pack" [class]="c[1]" [rarity]="c[2]" [name]="c[0]"></game-card>
