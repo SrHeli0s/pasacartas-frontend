@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class HandService {
   public data:Array<any> = []
   public pack:Array<any> = []
+  public segLeft:number = 0
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 <div class="game">
+    <div class="timer">Quedan {{hand.segLeft}} segundos</div>
     <h1>Selecciona tu nuevo pokemon:</h1>
     <div class="container">
         <game-card *ngFor="let c of hand.pack; index as i" [class]="c[1]" [rarity]="c[2]" [name]="c[0]" (click)="select(i)"></game-card>
