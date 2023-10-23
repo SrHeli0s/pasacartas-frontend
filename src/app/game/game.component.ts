@@ -49,19 +49,22 @@ export class GameComponent implements OnInit {
 
   interval:any
 
-  constructor(public commsService:CommsService, private router: Router, public hand:HandService) {}
-
-  async ngOnInit(): Promise<void> {
-    if (this.commsService.gameID=='') { this.router.navigateByUrl('/') }
-
-    this.hand.segLeft = 120
-
+  constructor(public commsService:CommsService, private router: Router, public hand:HandService) {
     this.interval = setInterval(async () => {
       this.hand.segLeft -= 1
       if (this.hand.segLeft <= 0) {
         this.select(Math.floor(Math.random()*this.hand.pack.length))
       }
     }, 1000);
+  }
+
+  async ngOnInit(): Promise<void> {
+    if (this.commsService.gameID=='') { 
+      clearInterval(this.interval)
+      this.router.navigateByUrl('/')
+    }
+
+    this.hand.segLeft = 120
   }
 
   select(i:any) {

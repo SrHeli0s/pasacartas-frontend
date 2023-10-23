@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   codeGame:string = ''
 
-  constructor(public commsService:CommsService, private router: Router) {}
+  constructor(public commsService:CommsService, private router: Router) {
+    for(let i=0; i<1000; i++) clearInterval(i);
+  }
 
   public async newGame() {
     await this.commsService.newGame()
