@@ -14,7 +14,7 @@ export class TestPackComponent implements OnInit{
 
   async newPack() {
     await this.commsService.setSettings(this.settings)
-    this.pack = await this.commsService.generatePack()
+    this.pack = await this.commsService.generatePack(this.settings.meta)
   }
 
   async ngOnInit(): Promise<void> {

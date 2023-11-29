@@ -16,6 +16,9 @@
                 <input matInput type="number" name="minProb" [(ngModel)]="settings.minProbAfterMod">
             </mat-form-field>
 
+            <mat-checkbox class="meta" name="meta" [(ngModel)]="settings.meta">Meta mode</mat-checkbox>
+            <mat-icon matTooltip="Reworks items and their probabilities">help</mat-icon>
+
             <fieldset>
                 <legend>Probabilidades de cartas</legend>
                 <mat-form-field class="commonProb">

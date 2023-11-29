@@ -30,9 +30,9 @@ export class CommsService {
     this.working = false
   }
 
-  public async startGame() {
+  public async startGame(settings:any) {
     this.working = true
-    const res = await this.post('start/'+this.gameID,{'playerid':this.playerID})
+    const res = await this.post('start/'+this.gameID,{'playerid':this.playerID, 'settings':settings})
     this.working = false
     return res.pack
   }
@@ -69,9 +69,9 @@ export class CommsService {
     this.working = false
   }
 
-  public async generatePack() {
+  public async generatePack(meta:boolean) {
     this.working = true
-    const res = await this.get('generatePack')
+    const res = await this.get('generatePack/'+(meta ? '1' : '0'))
     this.working = false
     return res.pack
   }
