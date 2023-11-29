@@ -30,9 +30,9 @@ export class CommsService {
     this.working = false
   }
 
-  public async startGame(settings:any) {
+  public async startGame() {
     this.working = true
-    const res = await this.post('start/'+this.gameID,{'playerid':this.playerID, 'settings':settings})
+    const res = await this.post('start/'+this.gameID,{'playerid':this.playerID})
     this.working = false
     return res.pack
   }

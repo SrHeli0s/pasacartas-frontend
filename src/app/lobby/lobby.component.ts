@@ -41,7 +41,8 @@ export class LobbyComponent implements OnInit {
   }
 
   public async startGame() {
-    this.hand.pack = await this.commsService.startGame(this.settings)
+    await this.commsService.setSettings(this.settings)
+    this.hand.pack = await this.commsService.startGame()
     this.router.navigateByUrl('/game')
   }
 }
