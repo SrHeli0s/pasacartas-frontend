@@ -19,11 +19,11 @@ export class CardlistComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     const cards = await this.commsService.getAll()
 
-    this.common = cards.common
-    this.uncommon = cards.uncommon
-    this.rare = cards.rare
-    this.epic = cards.epic
-    this.legendary = cards.legendary
+    this.common = cards.normal.common
+    this.uncommon = cards.normal.uncommon
+    this.rare = cards.normal.rare
+    this.epic = cards.normal.epic
+    this.legendary = cards.normal.legendary
   
   }
 }
